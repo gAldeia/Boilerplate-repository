@@ -15,7 +15,7 @@ The purpose is to unify my repositories, using a folder structure, files and con
 Markdown files
 ------
 
-All github recommended community standards files should be within _.github_ folder, except the _LICENSE.txt_ file (this one should be in the root). Those files are:
+All github recommended community standards files should be within __.github__ folder, except the _LICENSE.txt_ file (this one should be in the root). Those files are:
 
 * README.md
 * CONTRIBUTING.md 
@@ -26,6 +26,8 @@ Also, for simplicity, there's two more files to help to write down simple tasks 
 
 * TODO.md
 * CHANGELOG.md
+
+GitHub automatically search for those markdown files in the __root__ folder, __.github__ folder and the __docs__ folder. For organization purposes, the __docs__ folder will be used to keep documentation about the project. 
 
 ### Headers
 
