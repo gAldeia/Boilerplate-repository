@@ -7,7 +7,7 @@ AInet Symbolic Regression
 =====
 
 
-### Versão em Português:
+### Sumário:
 
 - [1 Regressão Simbólica AInet](#introp)
     - [1.1 A estrutura de dados IT (Interação-Transformação)](#1.1p)
