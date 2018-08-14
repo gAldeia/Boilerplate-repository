@@ -164,21 +164,31 @@ stack exec SymbolicRegression
 Basta definir os parâmetros e obter o resultado da regressão IO (Le). Para uma melhor descrição, confira a [página de documentação (em inglês)](https://galdeia.github.io/AInet-based-Symbolic-Regression/).
 
 ```haskell
-let g = 10       :: NumGen      --number of generations
-let p = 10       :: PopSize     --size of the initial population
-let l = 2        :: LeSize      --size of the expressions
-let c = 5        :: NumClones   --number of clones
-let supT = 3     :: SupressionT --supression threshold
+let g = 8        :: NumGen      --number of generations
+let p = 15       :: PopSize     --size of the initial population
+let l = 3        :: LeSize      --size of the expressions
+let c = 10       :: NumClones   --number of clones
+let supT = 2     :: SupressionT --supression threshold
 let simT = 0.005 :: SimplifyT   --simplification threshold
 
-let ds = listsToDataset sample  --sample dataset
+--some sample datasets
+let verticalPressureDs = listsToDataset verticalPressure
+let workDs             = listsToDataset work       
 
 --performing the symbolic regression and saving the result 
-res <- ainet g p l c supT simT ds
+print ("Search for the vertical pressure dataset:")
 
---printing the result
+res <- ainet g p l c supT simT verticalPressureDs
+
 print (textRepresentation res)
-print (evaluate res ds)
+print (evaluate res verticalPressureDs)
+
+print ("Search for the work dataset:")
+
+res <- ainet g p l c supT simT workDs
+
+print (textRepresentation res)
+print (evaluate res workDs)
 ```
 -----
 -----
